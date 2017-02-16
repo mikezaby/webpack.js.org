@@ -84,7 +84,7 @@ export default class Sidebar extends Component {
     let availableSpace = innerHeight + distToBottom - footerHeight;
     
     this.setState({ 
-      fixed: scrollY >= headerHeight && sidebarHeight < parentHeight,
+      fixed: scrollY >= headerHeight && sidebarHeight < parentHeight && sidebarHeight < innerHeight,
       extraHeight: sidebarHeight > availableSpace ? sidebarHeight - availableSpace : 0,
       maxWidth: parentWidth
     });
